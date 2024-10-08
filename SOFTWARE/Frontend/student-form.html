@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>SafeConnect: Student Form</title>
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="student-info-form-nav">
+                <a href="index.html" class="logo">SafeConnect</a>
+                <ul class="nav-links " id="nav-links">
+                    <span class="crossBtn" id="crossBtn"><img src="images/cross.png" alt="cross-icon"></span>
+                    <li><a href="student-form.html">Student Form</a></li>
+                    <li><a href="admin-login.html">Admin Login</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                </ul>
+                <span class="menuBtn" id="menuBtn"><img src="images/menu.png" alt="menu-icon"></span>
+            </nav>
+        </header>
+        <br>
+        <br>
+        <div class="form-section">
+            <div class="input-main">
+                <h2 id="formText">Student Information Form</h2>
+                <h2 id="messagetext"></h2>
+                <div class="form-container">
+                    <input type="text" id="name" placeholder="Enter your name" required><br>
+
+                    <input type="text" id="student-number" placeholder="Enter your student number" required><br>
+
+                    <input type="text" id="card-uid" placeholder="Enter your card UID" required><br>
+                
+                    <select id="strand" required>
+                        <option value="">--Select strand--</option>
+                        <option value="MAWD">MAWD</option>
+                        <option value="STEM">STEM</option>
+                        <option value="HUMSS">HUMSS</option>
+                        <option value="ABM">ABM</option>
+                    </select><br>
+
+                    <select id="year-level" required>
+                        <option value="">--Select year level--</option>
+                        <option value="GRADE-11">Grade 11</option>
+                        <option value="GRADE-12">Grade 12</option>
+                    </select><br>
+
+                    <input type="text" id="phone-number" placeholder="Enter your phone number" required><br>
+                    <!--PROFILE PIC-->
+                    <input type="file" id="profile-pic" accept="image/*" required><br>
+
+                    <input type="file" id="medical-certificate" accept="image/*" required><br>
+
+                    <input type="text" id="additional-information" placeholder="Enter additional information" required><br>
+
+                    <button id="submit-btn">Submit</button>
+                    
+                    <div id="loader-container" class="loader-container">
+                        <div class="three-body">
+                            <div class="three-body__dot"></div>
+                            <div class="three-body__dot"></div>
+                            <div class="three-body__dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/Backend/student-data-form.js"></script>
+    <script src="/Backend/button-form.js"></script>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>SafeConnect: Student Form</title>
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="student-info-form-nav">
+                <a href="index.html" class="logo">SafeConnect</a>
+                <ul class="nav-links " id="nav-links">
+                    <span class="crossBtn" id="crossBtn"><img src="images/cross.png" alt="cross-icon"></span>
+                    <li><a href="student-form.html">Student Form</a></li>
+                    <li><a href="admin-login.html">Admin Login</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                </ul>
+                <span class="menuBtn" id="menuBtn"><img src="images/menu.png" alt="menu-icon"></span>
+            </nav>
+        </header>
+        <br>
+        <br>
+        <div class="form-section">
+            <div class="input-main">
+                <h2 id="formText">Student Information Form</h2>
+                <h2 id="messagetext"></h2>
+                <div class="form-container">
+                    <input type="text" id="name" placeholder="Enter your name" required><br>
+
+                    <input type="text" id="student-number" placeholder="Enter your student number" required><br>
+
+                    <input type="text" id="card-uid" placeholder="Enter your card UID" required><br>
+                
+                    <select id="strand" required>
+                        <option value="">--Select strand--</option>
+                        <option value="MAWD">MAWD</option>
+                        <option value="STEM">STEM</option>
+                        <option value="HUMSS">HUMSS</option>
+                        <option value="ABM">ABM</option>
+                    </select><br>
+
+                    <select id="year-level" required>
+                        <option value="">--Select year level--</option>
+                        <option value="GRADE-11">Grade 11</option>
+                        <option value="GRADE-12">Grade 12</option>
+                    </select><br>
+
+                    <input type="text" id="phone-number" placeholder="Enter your phone number" required><br>
+                   
+                    <label for="profile-pic">Profile Picture</label>
+                    <input type="file" id="profile-pic" accept="image/*" required><br>
+
+                    <label for="medical-certificate">Medical Certificate</label>
+                    <input type="file" id="medical-certificate" accept="image/*" required><br>
+
+                    <input type="text" id="additional-information" placeholder="Enter additional information" required><br>
+
+                    <button id="submit-btn">Submit</button>
+                    
+                    <div id="loader-container" class="loader-container">
+                        <div class="three-body">
+                            <div class="three-body__dot"></div>
+                            <div class="three-body__dot"></div>
+                            <div class="three-body__dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/Backend/student-data-form.js"></script>
+    <script src="/Backend/button-form.js"></script>
+</body>
+</html>
+-->

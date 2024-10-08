@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <title>SafeConnect: Admin Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="admin-nav">
+                <a href="index.html" class="logo">SafeConnect</a>
+                <ul class="nav-links" id="nav-links">
+                    <span class="crossBtn" id="crossBtn"><img src="images/cross.png" alt="cross-icon"></span>
+                    <li><a href="student-form.html">Student Form</a></li>
+                    <li><a href="admin-login.html">Admin Login</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                </ul>
+                <span class="menuBtn" id="menuBtn"><img src="images/menu.png" alt="menu-icon"></span>
+            </nav>
+        </header>
+        <div class="dashboard">
+            <div id="med-cert-container" class="item item-1">
+                <img id="medical-cert-image">
+            </div>
+            <div class="item item-2">
+                <canvas id="searchAnalyticsChart"></canvas>
+            </div>
+            <div class="item item-3">
+                <label for="search-input">Search Student Records</label>
+                <img class="searchIcon" id="search" src="images/bx-search-alt.png" alt="search-icon">
+                <input type="text" id="search-input" placeholder="Enter Student Number">
+            </div>
+            <div class="item item-4">
+                <textarea id="add-info-area" readonly placeholder="Student Additional Medical Information"></textarea>
+            </div>
+            <div class="item item-5">
+                <div class="item-5-left">
+                    <h2 id="totalNumberStudents"></h2>
+                    <h5>Students Enrolled</h5>
+                </div>
+                <div class="item-5-right">
+                    <img src="/Frontend/images/student.png" alt="Student-Icon">
+                </div>
+            </div>
+        </div>
+        <div id="profile-container" class="profile-container">
+            <div id="profile-main" class="profile-main">
+                <div id="profile-top" class="profile-top">
+                    <img id="profile-pic">
+                    <div>
+                        <p id="name-display"></p>
+                        <p id="section-display"></p>
+                        <p>Total Clinic Visit: <span id="visit-display">0</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="profile-bottom">
+                    <p>Clinical Admission Details</p>
+                    <p id="addInfo">Add Information</p>
+                </div>
+                <div class="input-container-user">
+                    <div id="addContainer" class="add-form">
+                        <input id="addDate" type="text" placeholder="Enter Date of Admission">
+                        <input id="addReason" type="text" placeholder="Enter Reason of Admission">
+                        <input id="addTreatment" type="text" placeholder="Enter Treatment">
+                        <div id="add-btn-container" class="add-btn-container">
+                            <button id="addButton1">Add</button>
+                            <button id="cancelButton1">Cancel</button>
+                        </div>
+                        <div id="loader-container" class="loader-container" style="display: none; justify-content: center;">
+                            <div class="three-body">
+                                <div class="three-body__dot"></div>
+                                <div class="three-body__dot"></div>
+                                <div class="three-body__dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card-container" class="card-container">
+                        <!--<div class="cards">
+                            <p>Date of Admission: September 30, 2024</p>
+                            <p>Reason for Admission: Sever Headache</p>
+                            <p>Treatment: Pain Relief Medication</p>
+                            <img class="editIcon" src="images/edit.png" alt="Edit-Icon">
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/Backend/admin-find-data.js"></script>
+    <script src="/Backend/button-form.js"></script>
+</body>
+</html>
